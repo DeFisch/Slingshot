@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slingshot</title>
+<style>
+  :root {
+    --ink: #1a1d21;
+    --muted: #70767e;
+    --line: #e4e6e9;
+    --bg: #ffffff;
+    --good: #2e7d4f;
+    --bad: #b4453a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  nav {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 190px;
+    border-right: 1px solid var(--line); padding: 28px 22px; overflow-y: auto;
+  }
+  nav h1 { font-size: 17px; margin: 0 0 24px; letter-spacing: 0.01em; }
+  nav .g { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+           color: var(--muted); margin: 18px 0 6px; }
+  nav a { display: block; color: var(--ink); text-decoration: none;
+          padding: 3px 0; font-size: 14px; }
+  nav a:hover { text-decoration: underline; }
+  main { margin-left: 190px; padding: 28px 36px 60px; max-width: 1180px; }
+  section h2 { font-size: 15px; margin: 34px 0 6px; }
+  section h2:first-child { margin-top: 0; }
+  .row { padding: 18px 0 8px; border-bottom: 1px solid var(--line);
+         scroll-margin-top: 16px; }
+  .row h3 { font-size: 14px; font-weight: 600; margin: 0 0 10px; }
+  .tag { font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+         text-transform: uppercase; margin-left: 8px; }
+  .tag.s { color: var(--good); }
+  .tag.f { color: var(--bad); }
+  .pair { display: flex; gap: 14px; flex-wrap: wrap; }
+  .pair figure { margin: 0; flex: 1; min-width: 300px; }
+  video { width: 100%; display: block; border: 1px solid var(--line);
+          border-radius: 4px; background: #000; }
+  figcaption { font-size: 12px; color: var(--muted); margin-top: 5px; }
+  footer { margin-top: 36px; font-size: 12px; color: var(--muted); }
+  @media (max-width: 720px) {
+    nav { position: static; width: auto; border-right: none;
+          border-bottom: 1px solid var(--line); }
+    main { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <h1>Slingshot</h1>
+  <div class="g">Successes</div>
+  <a href="#ep8">Episode 8</a>
+  <a href="#ep17">Episode 17</a>
+  <a href="#ep19">Episode 19</a>
+  <a href="#ep24">Episode 24</a>
+  <div class="g">Failures</div>
+  <a href="#ep10">Episode 10</a>
+  <a href="#ep15">Episode 15</a>
+  <a href="#ep26">Episode 26</a>
+  <a href="#ep34">Episode 34</a>
+  <a href="#ep37">Episode 37</a>
+</nav>
+<main>
+  <section id="successes">
+    <h2>Successes</h2>
+    <div class="row" id="ep8">
+      <h3>Episode 8<span class="tag s">success</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep08_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep08_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep17">
+      <h3>Episode 17<span class="tag s">success</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep17_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep17_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep19">
+      <h3>Episode 19<span class="tag s">success</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep19_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep19_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep24">
+      <h3>Episode 24<span class="tag s">success</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep24_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep24_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section id="failures">
+    <h2>Failures</h2>
+    <div class="row" id="ep10">
+      <h3>Episode 10<span class="tag f">failure</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep10_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep10_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep15">
+      <h3>Episode 15<span class="tag f">failure</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep15_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep15_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep26">
+      <h3>Episode 26<span class="tag f">failure</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep26_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep26_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep34">
+      <h3>Episode 34<span class="tag f">failure</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep34_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep34_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row" id="ep37">
+      <h3>Episode 37<span class="tag f">failure</span></h3>
+      <div class="pair">
+        <figure>
+          <video src="videos/ep37_raw.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>camera feed (0.5&times;)</figcaption>
+        </figure>
+        <figure>
+          <video src="videos/ep37_overlay.mp4" autoplay loop muted playsinline controls></video>
+          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <footer>Ball-catching rollouts, head camera at 0.5&times; speed.
+    Right: commanded grid cell (green), detected ball trajectory, and
+    predicted landing point overlaid.</footer>
+</main>
+</body>
+</html>

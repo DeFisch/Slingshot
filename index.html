@@ -44,14 +44,32 @@
           border-radius: 4px; background: #000; }
   figcaption { font-size: 12px; color: var(--muted); margin-top: 5px; }
   footer { margin-top: 36px; font-size: 12px; color: var(--muted); }
+  #speed {
+    position: fixed; top: 20px; right: 24px; display: flex; gap: 4px;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+    padding: 4px; font-size: 13px; z-index: 5;
+  }
+  #speed span { color: var(--muted); padding: 3px 6px 3px 10px; }
+  #speed button {
+    font: inherit; border: none; background: none; color: var(--ink);
+    padding: 3px 10px; border-radius: 4px; cursor: pointer;
+  }
+  #speed button.on { background: var(--ink); color: var(--bg); }
   @media (max-width: 720px) {
     nav { position: static; width: auto; border-right: none;
           border-bottom: 1px solid var(--line); }
     main { margin-left: 0; }
+    #speed { position: sticky; top: 8px; margin-left: auto; width: fit-content; }
   }
 </style>
 </head>
 <body>
+<div id="speed">
+  <span>speed</span>
+  <button data-r="2">1&times;</button>
+  <button data-r="1" class="on">0.5&times;</button>
+  <button data-r="0.5">0.25&times;</button>
+</div>
 <nav>
   <h1>Slingshot</h1>
   <div class="g">Successes</div>
@@ -74,11 +92,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep08_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep08_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -87,11 +105,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep17_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep17_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -100,11 +118,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep19_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep19_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -113,11 +131,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep24_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep24_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -129,11 +147,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep10_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep10_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -142,11 +160,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep15_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep15_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -155,11 +173,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep26_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep26_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -168,11 +186,11 @@
       <div class="pair">
         <figure>
           <video src="videos/ep34_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep34_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
@@ -181,18 +199,40 @@
       <div class="pair">
         <figure>
           <video src="videos/ep37_raw.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>camera feed (0.5&times;)</figcaption>
+          <figcaption>camera feed</figcaption>
         </figure>
         <figure>
           <video src="videos/ep37_overlay.mp4" autoplay loop muted playsinline controls></video>
-          <figcaption>grid prediction + ball trajectory (0.5&times;)</figcaption>
+          <figcaption>grid prediction + ball trajectory</figcaption>
         </figure>
       </div>
     </div>
   </section>
-  <footer>Ball-catching rollouts, head camera at 0.5&times; speed.
+  <footer>Ball-catching rollouts, head camera. Playback speed selectable top right (default 0.5Ball-catching rollouts, head camera at 0.5&times; speed.times;).
     Right: commanded grid cell (green), detected ball trajectory, and
     predicted landing point overlaid.</footer>
 </main>
+<script>
+  // videos are encoded at 15 fps (= 0.5x real time), so playbackRate 2 = 1x
+  var rate = 1;
+  function applyRate() {
+    document.querySelectorAll("video").forEach(function (v) { v.playbackRate = rate; });
+  }
+  document.querySelectorAll("#speed button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      rate = parseFloat(b.dataset.r);
+      document.querySelectorAll("#speed button").forEach(function (x) {
+        x.classList.toggle("on", x === b);
+      });
+      applyRate();
+    });
+  });
+  // keep the chosen rate after loops/reloads reset it
+  document.querySelectorAll("video").forEach(function (v) {
+    v.addEventListener("loadedmetadata", function () { v.playbackRate = rate; });
+    v.addEventListener("play", function () { v.playbackRate = rate; });
+  });
+  applyRate();
+</script>
 </body>
 </html>
